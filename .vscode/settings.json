@@ -1,0 +1,19 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.tabSize": 2,
+  "cSpell.words": [
+    "charliermarsh",
+    "codezombiech",
+    "debugpy",
+    "dhoeric",
+    "eamodio",
+    "mhutchie",
+    "njpwerner",
+    "shellautocompletion",
+    "tyriar",
+    "wayou",
+    "yzhang"
+  ]
+}
