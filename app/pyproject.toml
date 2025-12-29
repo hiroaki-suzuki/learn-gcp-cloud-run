@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "app"
+version = "0.1.0"
+description = "App for learning Google Cloud Run"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+app = "app.main:main"
+
+
+[dependency-groups]
+dev = ["ruff>=0.14.10", "ty>=0.0.7"]
