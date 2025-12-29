@@ -8,20 +8,19 @@
     "learn-gcp-cloud-run-devcontainer"
   ],
   "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "configureZshAsDefaultShell": true,
+      "configureZshAsDefaultShell": true
     },
     "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {
       "version": "0.9.18",
       "shellautocompletion": true
-    },
-    "ghcr.io/devcontainers-extra/features/ruff:1": {
-      "version": "0.4.10"
     }
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        "astral-sh.ty",
         "charliermarsh.ruff",
         "codezombiech.gitignore",
         "eamodio.gitlens",
@@ -31,6 +30,7 @@
         "njpwerner.autodocstring",
         "ryu1kn.partial-diff",
         "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
         "tyriar.sort-lines",
         "wayou.vscode-todo-highlight",
         "yzhang.markdown-all-in-one"

@@ -3,16 +3,43 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
+  "python.languageServer": "None",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "ruff.path": [
+    "/workspaces/learn-gcp-cloud-run/app/.venv/bin/ruff"
+  ],
+  "ruff.configuration": "/workspaces/learn-gcp-cloud-run/app/ruff.toml",
+  "ty.path": [
+    "/workspaces/learn-gcp-cloud-run/app/.venv/bin/ty"
+  ],
+  "ty.configurationFile": "/workspaces/learn-gcp-cloud-run/app/ty.toml",
   "cSpell.words": [
     "charliermarsh",
     "codezombiech",
     "debugpy",
     "dhoeric",
     "eamodio",
+    "isort",
     "mhutchie",
     "njpwerner",
+    "pycache",
+    "pycodestyle",
+    "pydocstyle",
+    "Pyflakes",
+    "pyproject",
+    "pytest",
+    "pyupgrade",
     "shellautocompletion",
+    "tamasfe",
+    "trixie",
     "tyriar",
+    "venv",
     "wayou",
     "yzhang"
   ]
