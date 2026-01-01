@@ -8,7 +8,7 @@ ARG GCLOUD_FILE=google-cloud-cli-${GCLOUD_VERSION}-linux-x86_64.tar.gz
 
 WORKDIR /tmp
 
-RUN curl -O https://storage.googleapis.com/cloud-sdk-release/${GCLOUD_FILE} \
+RUN curl -fL -O https://storage.googleapis.com/cloud-sdk-release/${GCLOUD_FILE} \
   && echo "${GCLOUD_MD5} ${GCLOUD_FILE}" | md5sum -c - \
   && tar -xf ${GCLOUD_FILE} -C /usr/local/ \
   && /usr/local/google-cloud-sdk/install.sh --quiet --usage-reporting=false \
