@@ -8,18 +8,22 @@
     "learn-gcp-cloud-run-devcontainer"
   ],
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-    "ghcr.io/devcontainers/features/common-utils:2": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.5": {},
+    "ghcr.io/devcontainers/features/common-utils:2.5.5": {
       "configureZshAsDefaultShell": true
     },
     "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {
       "version": "0.9.18",
       "shellautocompletion": true
+    },
+    "ghcr.io/devcontainers-extra/features/claude-code:1": {
+      "version": "2.0.76"
     }
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        "anthropic.claude-code",
         "astral-sh.ty",
         "charliermarsh.ruff",
         "codezombiech.gitignore",
@@ -36,5 +40,16 @@
         "yzhang.markdown-all-in-one"
       ]
     }
-  }
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=claude-code-bashhistory-${devcontainerId},target=/commandhistory,type=volume",
+    "source=claude-code-config-${devcontainerId},target=/home/vscode/.claude,type=volume"
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude",
+    "TZ": "Asia/Tokyo"
+  },
+  "postCreateCommand": "chmod +x .devcontainer/post-start.sh",
+  "postStartCommand": "bash .devcontainer/post-start.sh"
 }

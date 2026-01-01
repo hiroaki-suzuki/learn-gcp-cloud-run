@@ -2,7 +2,13 @@
   "editor.renderWhitespace": "all",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
   "python.languageServer": "None",
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -22,6 +28,7 @@
   "cSpell.words": [
     "charliermarsh",
     "codezombiech",
+    "commandhistory",
     "debugpy",
     "dhoeric",
     "eamodio",
